@@ -79,6 +79,15 @@ struct Trie{
         }
     }
 };
+string intToBinary32(int num) {
+    string binary(32, '0');
+    for (int i = 31; i >= 0; --i) {
+        if (num & (1 << (31 - i))) {
+            binary[i] = '1';
+        }
+    }
+    return binary;
+}
 void solve(){
 
 }
